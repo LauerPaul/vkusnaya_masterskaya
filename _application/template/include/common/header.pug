@@ -11,20 +11,21 @@ header
 				.logo-description-wrapper
 					|Домашняя<br>кондитерская
 
-			// tel
+			//tel
 			.tel-section.d-flex.align-items-center
-				.icon-tel-wrapper.float-left
-				.float-left.wrapper
+				.wrapper
 					a.tel-wrapper(href="tel:0669752865") (066) 975-28-65
 					span.tel-description без выходных с 8:00 до 21:00
+					.icon-tel-wrapper
 				.clearfix
-
 			// social
 			.social-section.d-flex.align-items-center
-				a.social-link.inst.d-flex.align-items-center(href="https://www.instagram.com/masterskaya__vkusa/", target="_blank")
-					span Instagram
-				a.social-link.faceb.d-flex.align-items-center(href="https://www.facebook.com/natalka.zin", target="_blank")
-					span Facebook
+				span.social-link.d-flex.align-items-center.flex-row-reverse
+					a(href="https://www.instagram.com/masterskaya__vkusa/", target="_blank") Instagram
+					.before.inst
+				.social-link.d-flex.align-items-center.flex-row-reverse
+					a(href="https://www.facebook.com/natalka.zin", target="_blank") Facebook
+					.before.faceb
 
 			// buy btn
 			.btn-section

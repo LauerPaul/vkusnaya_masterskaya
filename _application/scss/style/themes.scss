@@ -3,8 +3,17 @@
 }
 
 body {
-	min-width: 1920px;
+	padding-top: 168px;
 }
 .container {
 	min-width: 1880px;
+	
+	@media (max-width: 1900px) and (min-width: 1880px) {
+		min-width: 1860px;
+	}
+
+}
+
+.last-section-wrapper {
+	background: url(../../images/bg-last-section.png) no-repeat center bottom;
 }

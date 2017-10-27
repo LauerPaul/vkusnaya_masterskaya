@@ -1,0 +1,52 @@
+/* FAQ */
+.faq-section {
+	width: 867px;
+	float: left;
+	margin-top: 20px;
+	padding-bottom: 55px;
+	
+	.title {
+		font-size: 48px;
+		color: $c1;
+		text-align: center;
+		line-height: 48px;
+		font-family: $ad;
+		font-weight: normal;
+		font-style: normal;
+		margin-bottom: 10px;
+	}
+	
+	.item-line {
+		position: relative;
+		padding: 17px 20px 15px 65px;
+		background: #fbf4f1;
+		margin-top: 10px;
+
+		&::before {
+			content: url(../../images/faq_icon.png);
+			display: block;
+			position: absolute;
+			left: 20px;
+			top: 20px;
+		}
+		
+		.title-item {
+			margin-top: 0px;
+			font-family: $roboto;
+			font-weight: 500;
+			font-style: normal;
+			font-size: 15px;
+			color: $c1;
+		}
+
+		.text-item {
+			font-family: $roboto;
+			font-weight: normal;
+			font-style: normal;
+			font-size: 15px;
+			color: $c2;
+		}
+
+	}
+
+}

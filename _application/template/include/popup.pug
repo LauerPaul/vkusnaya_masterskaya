@@ -1,0 +1,35 @@
+// POPUP 
+.popup-wrapper.d-flex.justify-content-center.align-items-center
+	.popup-window
+		.title Оформление заказа на торт
+
+		form(action="")
+			.container-fluid
+				.row
+					.col-6
+						.input-group.flex-wrap.width-50
+							label Как Вас зовут:
+							input(type="text", name="name").width-50
+					.col-6
+						.input-group.flex-wrap.float-right.width-50
+							label Ваш контактный телефон: *
+							input(type="tel", name="tel").width-50
+				.row
+					.col-12
+						.input-group.flex-wrap
+							label Комментарий:
+							textarea(name="comment")
+				.row
+					.col-12
+						.input-group.flex-wrap
+							label Куда нужно доставить торт (адрес доставки)?
+							input(type="text", name="address")
+				.row
+					.col-12
+						.input-group.flex-wrap.item-210
+							label Вес торта: 
+								span (если уже знаете)
+							input(type="text", name="ves")
+						.input-group.flex-wrap.item-210-next
+							label Есть ли пожелания по составу торта?: 
+							input(type="text", name="sostav")
