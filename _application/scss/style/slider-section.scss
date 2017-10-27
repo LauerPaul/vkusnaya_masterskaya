@@ -1,0 +1,32 @@
+/* SLIDER SECTION */
+.slider-section {
+	height: 570px;
+	padding-top: 40px;
+	background-repeat: no-repeat;
+	// background-size: contain;
+	background-position: center top;
+
+	.title-section {
+		font-size: 65px;
+		color: #9f1a50;
+		line-height: 45px;
+		font-family: $ad;
+		font-weight: normal;
+		font-style: normal;
+
+		.mini-information {
+			font-size: 48px;
+			line-height: 58px;
+		}
+	
+	}
+
+	.advantages {
+		width: 1000px;
+		height: 362px;
+		background: url(../../images/advantages.png) no-repeat center;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+
+}

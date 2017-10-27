@@ -1,0 +1,53 @@
+/* USERS SECTION */
+.users-section {
+	height: 316px;
+	background: #fbf4f1;
+
+	.user-wrapper{
+
+		.user-item {
+			width: 391px;
+			float: left;
+			margin-right: 35px;
+
+			&:last-child {
+				margin-right: 0px;
+			}
+			
+			.user-photo {
+				width: 100px;
+				height: 100px;
+				margin-right: 10px;
+				float: left;
+			}
+
+			.user-message {
+				width: calc(100% - 120px);
+    			float: left;
+
+				.name {
+					font-size: 20px;
+					font-family: $roboto;
+					font-weight: normal;
+					font-style: normal;
+					color: #9a7e55;
+					line-height: 18px;
+					margin-bottom: 12px;
+				}
+
+				.text {
+					font-size: 15px;
+					font-family: $roboto;
+					font-weight: normal;
+					font-style: italic;
+					color: #938776;
+					line-height: 18px;
+				}
+
+			}
+
+		}
+
+	}
+
+}

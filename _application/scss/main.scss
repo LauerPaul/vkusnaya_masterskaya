@@ -1,0 +1,28 @@
+@import "include/animate";
+/* ---------------------------------------
+Copyright 2017©ortodonts.ru
+dev. Pavel Ugrynovych (Lauer - lauer.com.ua)
+------------------------------------------ */
+/* ------------------------------------ */
+/* ----------- Bootstrap -------------- */
+/* ------------------------------------ */
+@import "include/_variables";
+@import "bootstrap";
+@import "hover";
+// @import "_animate";
+@import "include/_mixin";
+/* ------------------------------------ */
+/* -------- *Bootstrap END* ----------- */
+/* ------------------------------------ */
+@import "include/font";
+
+/* HEADER */
+@import "style/animation";
+@import "style/header";
+@import "style/footer";
+/* THEMES */
+@import "style/themes";
+@import "style/slider-section";
+@import "style/delivery-section";
+@import "style/products-section";
+@import "style/users-section";

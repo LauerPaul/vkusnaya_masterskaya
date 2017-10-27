@@ -1,0 +1,70 @@
+/* DELIVERY SECRTION */
+.delivery-section {
+	height: 340px;
+	background: url(../../images/delivaery-background.jpg) no-repeat center top;
+	
+	.wrapper {
+		height: 100%;
+		width: 700px;
+		margin: auto;
+	}
+
+	.padding-block {
+		padding-left: 410px;
+	}
+
+	.text-wrapper {
+    	padding-top: 30px;
+
+		.gold-text {
+			font-size: 20px;
+			color: $c2;
+			font-style: normal;
+			font-weight: normal;
+			font-family: $roboto;
+
+			&.title {
+				font-size: 24px;
+				line-height: 36px;
+			}
+
+		}
+		
+		.pink-text {
+			color: #9f1a50;
+			font-size: 46px;
+			font-style: normal;
+			font-weight: normal;
+			font-family: $roboto;
+		}
+
+	}
+
+	.description-text {
+		font-size: 15px;
+		color: #938776;
+		font-style: normal;
+		font-weight: normal;
+		font-family: $roboto;
+		padding-left: 35px;
+		position: relative;
+    	padding-bottom: 25px;
+
+		&::before {
+			content: '*';
+			color: #9ad7d8;
+			font-style: normal;
+			font-weight: normal;
+			font-family: $roboto;
+			font-size: 68.21px;
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			line-height: 45px;
+
+		}
+	}
+
+}
