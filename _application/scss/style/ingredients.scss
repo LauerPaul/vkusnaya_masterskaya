@@ -4,6 +4,11 @@
 	float: right;
 	margin-top: 20px;
 	padding-bottom: 55px;
+
+	@media (max-width: 1879px) {
+		width: 100%;
+		padding-bottom: 20px;
+	}
 	
 	.title {
 		font-size: 48px;
@@ -14,6 +19,11 @@
 		font-weight: normal;
 		font-style: normal;
 		margin-bottom: 10px;
+		
+		@media (max-width: 1039px) {
+			font-size: 28px;
+			line-height: 28px;
+		}
 	}
 
 	.description {
@@ -25,10 +35,20 @@
 		color: $c2;
 		text-align: center;
 		line-height: 30px;
+
+		@media (max-width: 1039px) {
+			line-height: 16px;
+			font-size: 13px;
+		}
 	}
 
 	.item-container {
 		margin-top: 65px;
+
+		@media (max-width: 1039px) {
+			margin-top: 30px;
+		    margin-bottom: 30px;
+		}
 		
 		.item-row {
 			width: 100%;
@@ -42,11 +62,26 @@
 				width: 100%;
 				margin-bottom: 65px;
 
+				@media (max-width: 1039px) {
+					display: none;
+
+					&.active {
+						display: block;
+						max-width: 85%;
+						margin: auto;
+					}
+				}
+
 				.image-wrapper {
 					width: 180px;
 					height: 180px;
 					margin: auto;
 					margin-bottom: 20px;
+	
+					@media (max-width: 1039px) {
+						margin-bottom: 10px;
+					}
+
 				}
 
 				.text-wrapper {
@@ -56,6 +91,10 @@
 					font-family: $roboto;
 					font-weight: normal;
 					font-style: normal;
+
+					@media (max-width: 1039px) {
+						font-size: 13px;
+					}
 				}
 
 			}

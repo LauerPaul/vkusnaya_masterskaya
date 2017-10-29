@@ -6,6 +6,16 @@
 	// background-size: contain;
 	background-position: center top;
 
+	@media (max-width: 1039px) {
+		background-image: url(../../images/background-top-m.jpg) !important;
+		height: 207px;
+
+		> .container {
+			display: none !important;
+		}
+	}
+
+
 	.title-section {
 		font-size: 65px;
 		color: #9f1a50;

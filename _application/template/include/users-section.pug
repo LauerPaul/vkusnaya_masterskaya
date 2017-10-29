@@ -1,10 +1,11 @@
 // USERS SECTION 
 section.users-section.d-flex.align-items-center
 	.container
-
+		.arrow-slide.left.disabled(onclick="slide('feed', 'prev', this)")
+		
 		.user-wrapper.d-flex.justify-content-center
 
-			.user-item
+			.user-item.active
 				.user-photo
 					img(src="images/users/1.png", alt="Катюшенька")
 				.user-message
@@ -20,7 +21,7 @@ section.users-section.d-flex.align-items-center
 					.text.
 						Дякуємо за таке доповнення нашого свята!!! Торт, капкейки та кейк-попси на вищому рівні)) Гості в захваті)) Все дуже смачне
 
-			.user-item
+			.user-item.not-margin
 				.user-photo
 					img(src="images/users/2.png", alt="Мария")
 				.user-message
@@ -29,4 +30,5 @@ section.users-section.d-flex.align-items-center
 						Торт был ОЧЕНЬ вкусный!!! Я случайно съела порцию своего ребёнка))) пришлось соврать, что фея голодная прилетала)))
 
 			.clearfix
+		.arrow-slide.right(onclick="slide('feed', 'next', this)")
 //

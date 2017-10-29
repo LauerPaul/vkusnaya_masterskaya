@@ -3,17 +3,48 @@ footer {
 	height: 190px;
 	background: $white;
 	padding-bottom: 20px;
+	@media (max-width: 1879px) {
+		height: 130px;
+	}
 
+	@media (max-width: 1039px) {
+		height: 124px;
+		padding-bottom: 0;
+	}
+	
 	.header-menu {
 		height: 100%;
 		padding: 0px 30px;
 
+		@media (max-width: 1039px) {
+			-webkit-flex-wrap: wrap!important;
+			-ms-flex-wrap: wrap!important;
+			flex-wrap: wrap!important;
+		}
 		.logo-section{
 			width: 635px;
+			@media (max-width: 1879px) {
+				width: 440px;
+			}
+
+			@media (max-width: 1039px) {
+				display: none !important;
+			}
 			
 			.logo-wrapper {
 				display: inline-block;
 				margin-right: 13px;
+				height: 134px;
+				@include transition(all 0.4s);
+				
+				@media (max-width: 1879px) {
+					height: 90%;
+				}
+				
+				img {
+					max-height: 100%;
+					@include transition(all 0.4s);				
+				}
 			}
 			
 			.logo-description-wrapper {
@@ -24,6 +55,7 @@ footer {
 				font-style: normal;
 				color: $c2;
 				letter-spacing: 1px;
+				@include transition(all 0.4s);				
 			}
 
 		}
@@ -32,6 +64,17 @@ footer {
 		.tel-section {
 			width: 356px;
 			margin-right: 58px;
+			@media (max-width: 1879px) {
+				width: 372px;
+			    margin-right: 160px;
+			}
+			@media (max-width: 1039px) {
+			    width: calc(100%);
+			    margin: 0px;
+			    float: right;
+			    margin-top: 10px;
+			    margin-bottom: 5px;
+			}
 
 			.wrapper {
 				// width: calc(100% - 100px);
@@ -56,6 +99,12 @@ footer {
 				position: absolute;
 				left: 0;
 				top: 0;
+
+				@media (max-width: 1039px) {
+					width: 35px;
+					height: 35px;
+				    background-size: cover;
+				}
 			}
 
 			.tel-wrapper {
@@ -68,6 +117,14 @@ footer {
 				cursor: pointer;
 				text-decoration: none;
 				padding-left: 58px;
+
+				@media (max-width: 1039px) {
+					padding-left: 40px;
+					position: relative;
+					top: -2px;
+				    width: 100%;
+    				font-size: 27px;
+				}
 				
 				&:hover ~ .icon-tel-wrapper {
 					box-shadow: 0 10px 10px -10px rgba(0,0,0,.5);
@@ -86,6 +143,12 @@ footer {
 				font-style: normal;
 				font-size: 16px;
 				color: $c2;
+
+				@media (max-width: 1039px) {
+					font-size: 14px;
+					margin-top: -6px;
+					padding-left: 30px;
+				}
 			}
 
 		}
@@ -94,9 +157,20 @@ footer {
 		.social-section {
 			margin-right: 80px;
 			
+			@media (max-width: 1879px) and (min-width: 1040px) {
+				display: none !important;
+			}
+			@media (max-width: 1039px) {
+			    margin: 0 auto;
+			}
+
 			.social-link {
 				margin-right: 45px;
 				position: relative;
+
+				@media (max-width: 1039px) {
+				    margin: 0 auto;
+				}
 
 				> a {
 					color: $c2;
@@ -107,6 +181,18 @@ footer {
 					text-decoration: none;
 					border-bottom: 1px solid $c2;
 				    line-height: 16px;
+	
+					@media (max-width: 1039px) {
+						color: transparent;
+						border-color: transparent;
+						letter-spacing: -33px;
+						font-size: 0;
+						left: 0;
+						position: absolute;
+						width: 40px;
+						height: 40px;
+						z-index: 1;
+					}
 	
 					&:hover {
 						border-color: transparent;
@@ -134,16 +220,25 @@ footer {
 					transition-property: box-shadow,transform;
 					@include border-radius(50%);
 					
+					@media (max-width: 1039px) {
+						width: 40px;
+						height: 40px;
+						background-size: contain !important;
+					}
 					&.inst {
 						background: url(../../images/icons/instagramm_icon.png) no-repeat center;
 					}
 
 					&.faceb {
+						@media (max-width: 1039px) {
+							margin-right: 0px;
+						}
 						background: url(../../images/icons/facebook_icon.png) no-repeat center;
 					}
 				}
 			
 			}
+
 		}
 		
 		/* buy btn */
@@ -170,6 +265,10 @@ footer {
 				&:hover {
 					background: #b36286;
 					border-color: #904666;
+				}
+
+				@media (max-width: 1039px) {
+					display: none !important;
 				}
 			}
 

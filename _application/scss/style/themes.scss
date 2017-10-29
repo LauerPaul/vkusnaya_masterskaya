@@ -4,12 +4,26 @@
 
 body {
 	padding-top: 168px;
+
+	@media (max-width: 1879px) {
+		padding-top: 130px;
+	}
+	@media (max-width: 1039px) {
+		padding-top: 0px;
+	}
 }
 .container {
 	min-width: 1880px;
 	
 	@media (max-width: 1900px) and (min-width: 1880px) {
 		min-width: 1860px;
+	}
+	@media (max-width: 1879px) and (min-width: 1040px) {
+		min-width: 1024px;
+	}
+	@media (max-width: 1039px) {
+		min-width: 320px;
+		width: 320px;
 	}
 
 }

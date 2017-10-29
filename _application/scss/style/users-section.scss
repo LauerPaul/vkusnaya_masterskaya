@@ -3,6 +3,15 @@
 	height: 316px;
 	background: #fbf4f1;
 
+	@media (max-width: 1039px) {
+		height: 230px;
+	    margin-bottom: 30px;
+		
+		> .container {
+			position: relative;
+		}
+	}
+
 	.user-wrapper{
 
 		.user-item {
@@ -10,8 +19,23 @@
 			float: left;
 			margin-right: 35px;
 
-			&:last-child {
+			@media (max-width: 1039px) {
+				display: none;
+			    margin: 0;
+		        max-width: 85%;
+
+				&.active {
+					display: block;
+				}
+			}
+
+			&:last-child,
+			&.not-margin {
 				margin-right: 0px;
+			}
+
+			@media (max-width: 1879px) and (min-width: 1040px) {
+				margin-right: 55px;
 			}
 			
 			.user-photo {
@@ -19,11 +43,25 @@
 				height: 100px;
 				margin-right: 10px;
 				float: left;
+
+				@media (max-width: 1039px) {
+					width: 70px;
+					height: 70px;
+
+					img {
+						max-width: 100%;
+						max-height: 100%;
+					}
+				}
 			}
 
 			.user-message {
 				width: calc(100% - 120px);
     			float: left;
+
+				@media (max-width: 1039px) {
+					width: calc(100% - 90px);
+    			}
 
 				.name {
 					font-size: 20px;
@@ -35,6 +73,10 @@
 					margin-bottom: 12px;
 				}
 
+				@media (max-width: 1039px) {
+					font-size: 16px;
+				}
+
 				.text {
 					font-size: 15px;
 					font-family: $roboto;
@@ -42,6 +84,11 @@
 					font-style: italic;
 					color: #938776;
 					line-height: 18px;
+	
+					@media (max-width: 1039px) {
+						font-size: 12px;
+					}
+
 				}
 
 			}

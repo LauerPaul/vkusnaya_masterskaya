@@ -3,6 +3,11 @@
 	background: url(../../images/order-section.png) no-repeat center top;
 	padding-top: 70px;
 	padding-bottom: 70px;
+
+	@media (max-width: 1039px) {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
 	
 	.title {
 		font-size: 48px;
@@ -12,6 +17,11 @@
 		font-family: $ad;
 		font-weight: normal;
 		font-style: normal;
+		
+		@media (max-width: 1039px) {
+			font-size: 32px;
+			line-height: 32px;
+		}
 	}
 	
 	.information {
@@ -24,6 +34,14 @@
 		max-width: 1000px;
 		margin: auto;
 		margin-top: 25px;
+	
+		@media (max-width: 1039px) {
+			margin-top: auto;
+			padding-top: 15px;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-bottom: 5px;
+		}
 		
 		.item-line {
 			font-family: $roboto;
@@ -32,6 +50,15 @@
 			font-style: normal;
 			color: $c2;
 			line-height: 48px;
+
+			@media (max-width: 1039px) {
+				font-size: 15px;
+				color: #9a7e55;
+				line-height: 18px;
+				margin-bottom: 10px;
+			    padding-left: 30px;
+    			position: relative;
+			}
 			
 			&::before {
 				content: '';
@@ -40,17 +67,45 @@
 				height: 24px;
 				background: url(../../images/item-line-oreder.png) no-repeat center;
 				margin-right: 15px;
+
+				@media (max-width: 1039px) {
+				    width: 18px;
+				    height: 18px;
+				    background-size: contain;
+				    position: absolute;
+				    left: 0;
+				    top: 2px;
+				}
 			}
 		}
 		
 		> .wrapper-i {
 			margin-top: 20px;
+
+			@media (max-width: 1039px) {
+				-webkit-flex-wrap: wrap!important;
+				-ms-flex-wrap: wrap!important;
+				flex-wrap: wrap!important;
+				-webkit-box-pack: center!important;
+				-webkit-justify-content: center!important;
+				-ms-flex-pack: center!important;
+				justify-content: center!important;
+				margin-top: 10px;
+			}
 		}
 		
 		/* tel */
 		.tel-section {
 			width: 356px;
 			margin-right: 58px;
+
+			@media (max-width: 1039px) {
+		        width: 212px;
+			    margin: 0px;
+			    float: right;
+			    margin-top: 10px;
+			    margin-bottom: 5px;
+			}
 
 			.wrapper {
 				// width: calc(100% - 100px);
@@ -75,6 +130,12 @@
 				position: absolute;
 				left: 0;
 				top: 0;
+
+				@media (max-width: 1039px) {
+					width: 35px;
+					height: 35px;
+				    background-size: cover;
+				}
 			}
 
 			.tel-wrapper {
@@ -87,6 +148,14 @@
 				cursor: pointer;
 				text-decoration: none;
 				padding-left: 58px;
+
+				@media (max-width: 1039px) {
+					padding-left: 40px;
+					position: relative;
+					top: -2px;
+				    width: 100%;
+    				font-size: 24px;
+				}
 				
 				&:hover ~ .icon-tel-wrapper {
 					box-shadow: 0 10px 10px -10px rgba(0,0,0,.5);
@@ -105,6 +174,10 @@
 				font-style: normal;
 				font-size: 16px;
 				color: $c2;
+
+				@media (max-width: 1039px) {
+					display: none !important;
+				}
 			}
 
 		}
@@ -113,6 +186,10 @@
 		.social-section {
 			width: 118px;
 			margin-right: 112px;
+
+			@media (max-width: 1039px) {
+				display: none !important;
+			}
 			
 			.social-link {
 				font-family: $roboto;
@@ -153,6 +230,13 @@
 		
 		/* buy btn */
 		.btn-section {
+			@media (max-width: 1039px) {
+				width: 190px;
+				text-align: right;
+				float: right;
+				margin-top: -5px;
+				margin-bottom: 20px;
+			}
 			
 			.btn-popup {
 				width: 225px;
@@ -175,6 +259,12 @@
 				&:hover {
 					background: #b36286;
 					border-color: #904666;
+				}
+
+				@media (max-width: 1039px) {
+				    font-size: 15px;
+					width: 190px;
+					height: 42px;
 				}
 			}
 		}

@@ -3,47 +3,50 @@ section.ingredients-section
 	h3.title Ингредиенты и продукты
 	h4.description Для изготовления тортов мы используем только натуральные продукты
 
+	.arrow-slide.left.disabled(onclick="slide('ing', 'prev', this)")
+	
 	.item-container
 		.item-row
 
 			//ITEM
-			.item
+			.item.ing-item.active
 				.image-wrapper
 					img(src="images/ingredients/1.png", alt="шоколад")
 				.text-wrapper Натуральный швейцарский<br>шоколад Barry Callebaut
 			//ITEM
-			.item
+			.item.ing-item
 				.image-wrapper
 					img(src="images/ingredients/2.png", alt="ягоды")
 				.text-wrapper Только свежие<br>домашние ягоды
 			//ITEM
-			.item
+			.item.ing-item
 				.image-wrapper
 					img(src="images/ingredients/3.png", alt="мед")
 				.text-wrapper Натуральный<br>сладкий мед
 			//ITEM
-			.item
+			.item.ing-item
 				.image-wrapper
 					img(src="images/ingredients/4.png", alt="сливки")
 				.text-wrapper Фермерские<br>сливки
 			//ITEM
-			.item
+			.item.ing-item
 				.image-wrapper
 					img(src="images/ingredients/5.png", alt="сгущенка")
 				.text-wrapper Вкуснейшая натуральная<br>белорусская сгущенка
 			//ITEM
-			.item
+			.item.ing-item
 				.image-wrapper
 					img(src="images/ingredients/6.png", alt="масло")
 				.text-wrapper Качественное<br>сливочное масло
 			//ITEM
-			.item
+			.item.ing-item
 				.image-wrapper
 					img(src="images/ingredients/7.png", alt="Орехи")
 				.text-wrapper Орехи<br>высшего сорта
 			//ITEM
-			.item
+			.item.ing-item
 				.image-wrapper
 					img(src="images/ingredients/8.png", alt="крем-сыр")
 				.text-wrapper Нежный сливочный<br>крем-сыр
+	.arrow-slide.right(onclick="slide('ing', 'next', this)")
 //

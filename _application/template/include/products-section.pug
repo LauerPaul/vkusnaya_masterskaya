@@ -1,9 +1,9 @@
 // products section
 .container
-
+	.arrow-slide.left.disabled(onclick="slide('products', 'prev', this)")
 	.products-section
 
-		.product-column
+		.product-column.active
 			// ITEM
 			.product-item.product_1
 				img(src="images/products/product_1.jpg", alt="Торт для мальчика")
@@ -44,7 +44,7 @@
 
 		.product-column
 			// ITEM
-			.product-item.product_2
+			.product-item.product_2.mob
 				img(src="images/products/product_5.jpg", alt="Весенний свадебный торт")
 				.wrapper-information
 					.title-product Весенний свадебный торт
@@ -53,7 +53,7 @@
 					.price-product 250-320 грн/кг
 		.product-column
 			// ITEM
-			.product-item.product_2
+			.product-item.product_2.mob
 				img(src="images/products/product_6.jpg", alt="Торт на юбилей")
 				.wrapper-information
 					.title-product Торт на юбилей "Букет для мамы"
@@ -62,7 +62,7 @@
 					.price-product от 400 грн/кг
 		.product-column
 			// ITEM
-			.product-item.product_2
+			.product-item.product_2.mob
 				img(src="images/products/product_7.jpg", alt="Торт на юбилей")
 				.wrapper-information
 					.title-product Cake Smash / Первый тортик
@@ -71,5 +71,6 @@
 					.price-product от 350 грн/кг
 
 		.clearfix
+	.arrow-slide.right(onclick="slide('products', 'next', this)")
 
 //

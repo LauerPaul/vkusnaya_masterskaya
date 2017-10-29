@@ -11,7 +11,6 @@
     <script src="js/jquery.min.js"></script>
     <script async="async" src="js/tether.min.js"></script>
     <script async="async" src="js/bootstrap.min.js"></script>
-    <script async="async" src="js/wow.js"></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -72,8 +71,9 @@
     <!---->
     <!-- products section-->
     <div class="container">
+      <div class="arrow-slide left disabled" onclick="slide('products', 'prev', this)"></div>
       <div class="products-section">
-        <div class="product-column">
+        <div class="product-column active">
           <!-- ITEM-->
           <div class="product-item product_1"><img src="images/products/product_1.jpg" alt="Торт для мальчика"/>
             <div class="wrapper-information">
@@ -113,7 +113,7 @@
         </div>
         <div class="product-column">
           <!-- ITEM-->
-          <div class="product-item product_2"><img src="images/products/product_5.jpg" alt="Весенний свадебный торт"/>
+          <div class="product-item product_2 mob"><img src="images/products/product_5.jpg" alt="Весенний свадебный торт"/>
             <div class="wrapper-information">
               <div class="title-product">Весенний свадебный торт</div>
               <div class="text-product">Ванильный бисквит со сливочным крем-сыром, кусочками свежей клубники и клубничным конфи. Декор: сахарные цветы</div>
@@ -123,7 +123,7 @@
         </div>
         <div class="product-column">
           <!-- ITEM-->
-          <div class="product-item product_2"><img src="images/products/product_6.jpg" alt="Торт на юбилей"/>
+          <div class="product-item product_2 mob"><img src="images/products/product_6.jpg" alt="Торт на юбилей"/>
             <div class="wrapper-information">
               <div class="title-product">Торт на юбилей "Букет для мамы"</div>
               <div class="text-product">Ванильный бисквит, приготовленный на пару. Сливочный крем на основе Филадельфии и свежая малина. Декор: живые цветы</div>
@@ -133,7 +133,7 @@
         </div>
         <div class="product-column">
           <!-- ITEM-->
-          <div class="product-item product_2"><img src="images/products/product_7.jpg" alt="Торт на юбилей"/>
+          <div class="product-item product_2 mob"><img src="images/products/product_7.jpg" alt="Торт на юбилей"/>
             <div class="wrapper-information">
               <div class="title-product">Cake Smash / Первый тортик</div>
               <div class="text-product">Нежный ванильный бисквит со сливочным крем-сыром и слайсами сладкого свежего банана. Мастика, сливочный крем.</div>
@@ -143,13 +143,15 @@
         </div>
         <div class="clearfix"></div>
       </div>
+      <div class="arrow-slide right" onclick="slide('products', 'next', this)"></div>
     </div>
     <!---->
     <!-- USERS SECTION -->
     <section class="users-section d-flex align-items-center">
       <div class="container">
+        <div class="arrow-slide left disabled" onclick="slide('feed', 'prev', this)"></div>
         <div class="user-wrapper d-flex justify-content-center">
-          <div class="user-item">
+          <div class="user-item active">
             <div class="user-photo"><img src="images/users/1.png" alt="Катюшенька"/></div>
             <div class="user-message">
               <div class="name">Катюшенька</div>
@@ -169,7 +171,7 @@
               </div>
             </div>
           </div>
-          <div class="user-item">
+          <div class="user-item not-margin">
             <div class="user-photo"><img src="images/users/2.png" alt="Мария"/></div>
             <div class="user-message">
               <div class="name">Мария</div>
@@ -181,6 +183,7 @@
           </div>
           <div class="clearfix"></div>
         </div>
+        <div class="arrow-slide right" onclick="slide('feed', 'next', this)"></div>
       </div>
     </section>
     <!---->
@@ -219,50 +222,52 @@
         <section class="ingredients-section">
           <h3 class="title">Ингредиенты и продукты</h3>
           <h4 class="description">Для изготовления тортов мы используем только натуральные продукты</h4>
+          <div class="arrow-slide left disabled" onclick="slide('ing', 'prev', this)"></div>
           <div class="item-container">
             <div class="item-row">
               <!--ITEM-->
-              <div class="item">
+              <div class="item ing-item active">
                 <div class="image-wrapper"><img src="images/ingredients/1.png" alt="шоколад"/></div>
                 <div class="text-wrapper">Натуральный швейцарский<br>шоколад Barry Callebaut</div>
               </div>
               <!--ITEM-->
-              <div class="item">
+              <div class="item ing-item">
                 <div class="image-wrapper"><img src="images/ingredients/2.png" alt="ягоды"/></div>
                 <div class="text-wrapper">Только свежие<br>домашние ягоды</div>
               </div>
               <!--ITEM-->
-              <div class="item">
+              <div class="item ing-item">
                 <div class="image-wrapper"><img src="images/ingredients/3.png" alt="мед"/></div>
                 <div class="text-wrapper">Натуральный<br>сладкий мед</div>
               </div>
               <!--ITEM-->
-              <div class="item">
+              <div class="item ing-item">
                 <div class="image-wrapper"><img src="images/ingredients/4.png" alt="сливки"/></div>
                 <div class="text-wrapper">Фермерские<br>сливки</div>
               </div>
               <!--ITEM-->
-              <div class="item">
+              <div class="item ing-item">
                 <div class="image-wrapper"><img src="images/ingredients/5.png" alt="сгущенка"/></div>
                 <div class="text-wrapper">Вкуснейшая натуральная<br>белорусская сгущенка</div>
               </div>
               <!--ITEM-->
-              <div class="item">
+              <div class="item ing-item">
                 <div class="image-wrapper"><img src="images/ingredients/6.png" alt="масло"/></div>
                 <div class="text-wrapper">Качественное<br>сливочное масло</div>
               </div>
               <!--ITEM-->
-              <div class="item">
+              <div class="item ing-item">
                 <div class="image-wrapper"><img src="images/ingredients/7.png" alt="Орехи"/></div>
                 <div class="text-wrapper">Орехи<br>высшего сорта</div>
               </div>
               <!--ITEM-->
-              <div class="item">
+              <div class="item ing-item">
                 <div class="image-wrapper"><img src="images/ingredients/8.png" alt="крем-сыр"/></div>
                 <div class="text-wrapper">Нежный сливочный<br>крем-сыр</div>
               </div>
             </div>
           </div>
+          <div class="arrow-slide right" onclick="slide('ing', 'next', this)"></div>
         </section>
         <!---->
         <!-- FAQ -->
@@ -340,57 +345,82 @@
       </div>
     </footer>
     <!-- *FOOTER* -->
-    <script src="js/main.js"></script>
+    <script async="async" src="js/wow.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script async="async" src="js/jquery.jscrollpane.js"></script>
+    <script async="async" src="js/main.js"></script>
     <!-- POPUP -->
-    <div class="popup-wrapper d-flex justify-content-center align-items-center">
-      <div class="popup-window">
-        <div class="title">Оформление заказа на торт</div>
-        <form action="">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-6">
-                <div class="input-group flex-wrap width-50">
-                  <label>Как Вас зовут:</label>
-                  <input class="width-50" type="text" name="name"/>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="input-group flex-wrap float-right width-50">
-                  <label>Ваш контактный телефон: *</label>
-                  <input class="width-50" type="tel" name="tel"/>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <div class="input-group flex-wrap">
-                  <label>Комментарий:</label>
-                  <textarea name="comment"></textarea>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <div class="input-group flex-wrap">
-                  <label>Куда нужно доставить торт (адрес доставки)?</label>
-                  <input type="text" name="address"/>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <div class="input-group flex-wrap item-210">
-                  <label>Вес торта: <span>(если уже знаете)</span></label>
-                  <input type="text" name="ves"/>
-                </div>
-                <div class="input-group flex-wrap item-210-next">
-                  <label>Есть ли пожелания по составу торта?: </label>
-                  <input type="text" name="sostav"/>
-                </div>
-              </div>
-            </div>
+    <div class="popup-wrapper d-flex justify-content-center align-items-center hidden">
+      <div class="wrapp">
+        <div class="popup-window">
+          <div class="close-btn">
+            <div class="after"></div>
           </div>
-        </form>
+          <div class="title">Оформление заказа на торт</div>
+          <form action="">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-6 col-xs-12">
+                  <div class="input-group flex-wrap width-50">
+                    <label>Как Вас зовут:</label>
+                    <input class="width-50" type="text" name="name"/>
+                  </div>
+                </div>
+                <div class="col-6 col-xs-12">
+                  <div class="input-group flex-wrap float-right width-50">
+                    <label>Ваш контактный телефон: *</label>
+                    <input class="width-50" type="tel" name="tel"/>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="input-group flex-wrap">
+                    <label>Комментарий:</label>
+                    <textarea name="comment"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="input-group flex-wrap">
+                    <label>Куда нужно доставить торт (адрес доставки)?</label>
+                    <input type="text" name="address"/>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="input-group flex-wrap item-210">
+                    <label>Вес торта: <span>(если уже знаете)</span></label>
+                    <input type="text" name="ves"/>
+                  </div>
+                  <div class="input-group flex-wrap item-210-next">
+                    <label>Есть ли пожелания по составу торта?: </label>
+                    <input type="text" name="sostav"/>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="input-group flex-wrap w-600">
+                    <label>Хотите приложить фото с примером?</label>
+                    <div class="load-btn">ЗАГРУЗИТЬ ФОТО
+                      <input type="file" multiple="multiple"/>
+                    </div>
+                  </div>
+                  <div class="input-group flex-wrap w-2">
+                    <label>Желаемая дата доставки:</label>
+                    <input type="text" name="date"/>
+                  </div>
+                </div>
+                <div class="bottom-section-popup">
+                  <button class="btn-popup hvr-grow">СДЕЛАТЬ ЗАКАЗ</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </body>

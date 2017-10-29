@@ -7,6 +7,7 @@ dev. Pavel Ugrynovych (Lauer - lauer.com.ua)
 /* ----------- Bootstrap -------------- */
 /* ------------------------------------ */
 @import "include/_variables";
+@import "include/font";
 @import "bootstrap";
 @import "hover";
 // @import "_animate";
@@ -14,7 +15,7 @@ dev. Pavel Ugrynovych (Lauer - lauer.com.ua)
 /* ------------------------------------ */
 /* -------- *Bootstrap END* ----------- */
 /* ------------------------------------ */
-@import "include/font";
+@import "style/scrollpane";
 
 /* HEADER */
 @import "style/animation";

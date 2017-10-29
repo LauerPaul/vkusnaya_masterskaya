@@ -9,19 +9,52 @@ header {
 	z-index: 10;
 	@include transition(all 0.4s);
 	@include box-shadow(0px 0px 7px 0px rgba(0,0,0,0));
+	@media (max-width: 1879px) {
+		height: 130px;
+	}
+	@media (max-width: 1039px) {
+		height: 120px;
+		position: static;
+	}
+
 	
 	.header-menu {
 		height: 100%;
 		padding: 0px 30px;
 
+		@media (max-width: 1039px) {
+			// -webkit-flex-wrap: wrap!important;
+			// -ms-flex-wrap: wrap!important;
+			// flex-wrap: wrap!important;
+		    display: block !important;
+			padding: 0px;
+		}
+
 		.logo-section{
 			width: 635px;
+			@media (max-width: 1879px) {
+				width: 440px;
+			}
+			@media (max-width: 1039px) {
+				width: 86px;
+			    float: left;
+		        padding-top: 3px;
+			}
+
 			
 			.logo-wrapper {
 				display: inline-block;
 				margin-right: 13px;
 				height: 134px;
 				@include transition(all 0.4s);
+				
+				@media (max-width: 1879px) {
+					height: 90%;
+				}
+	
+				@media (max-width: 1039px) {
+					margin-right: 11px;
+				}
 				
 				img {
 					max-height: 100%;
@@ -37,7 +70,11 @@ header {
 				font-style: normal;
 				color: $c2;
 				letter-spacing: 1px;
-				@include transition(all 0.4s);				
+				@include transition(all 0.4s);
+
+				@media (max-width: 1039px) {
+					display: none !important;
+				}			
 			}
 
 		}
@@ -46,6 +83,17 @@ header {
 		.tel-section {
 			width: 356px;
 			margin-right: 58px;
+			@media (max-width: 1879px) {
+				width: 372px;
+			    margin-right: 160px;
+			}
+			@media (max-width: 1039px) {
+			    width: calc(100% - 86px);
+			    margin: 0px;
+			    float: right;
+			    margin-top: 10px;
+			    margin-bottom: 5px;
+			}
 
 			.wrapper {
 				// width: calc(100% - 100px);
@@ -70,6 +118,13 @@ header {
 				position: absolute;
 				left: 0;
 				top: 0;
+
+				@media (max-width: 1039px) {
+					width: 35px;
+					height: 35px;
+				    background-size: cover;
+				}
+
 			}
 
 			.tel-wrapper {
@@ -82,6 +137,14 @@ header {
 				cursor: pointer;
 				text-decoration: none;
 				padding-left: 58px;
+
+				@media (max-width: 1039px) {
+					padding-left: 40px;
+					position: relative;
+					top: -2px;
+				    width: 100%;
+    				font-size: 24px;
+				}
 				
 				&:hover ~ .icon-tel-wrapper {
 					box-shadow: 0 10px 10px -10px rgba(0,0,0,.5);
@@ -100,6 +163,10 @@ header {
 				font-style: normal;
 				font-size: 16px;
 				color: $c2;
+
+				@media (max-width: 1039px) {
+					display: none !important;
+				}
 			}
 
 		}
@@ -108,6 +175,10 @@ header {
 		.social-section {
 			margin-right: 80px;
 			
+			@media (max-width: 1879px) {
+				display: none !important;
+			}
+
 			.social-link {
 				margin-right: 45px;
 				position: relative;
@@ -163,7 +234,12 @@ header {
 		
 		/* buy btn */
 		.btn-section {
-			
+			@media (max-width: 1039px) {
+				width: calc(100% - 86px);
+				text-align: right;
+				float: right;
+			}
+
 			.btn-popup {
 				width: 225px;
 				height: 58px;
@@ -186,39 +262,58 @@ header {
 					background: #b36286;
 					border-color: #904666;
 				}
+
+				@media (max-width: 1039px) {
+				    font-size: 15px;
+					width: 190px;
+					height: 42px;
+				}
 			}
 
 		}
 
 	}
 
-	&.scroll {
-		height: 110px;
-		@include box-shadow(0px 0px 7px 0px rgba(0,0,0,0.75));
-		
-		.header-menu {
-		
-			.logo-section {
+	@media (min-width: 1040px) {
 
-				.logo-wrapper {
-					height: 90%;
-					
-					img {
-						max-height: 100%;
+		&.scroll {
+			height: 110px;
+			@include box-shadow(0px 0px 7px 0px rgba(0,0,0,0.75));
+			
+			@media (max-width: 1879px) {
+				height: 90px;
+			}
+			
+			.header-menu {
+			
+				.logo-section {
+
+					.logo-wrapper {
+						height: 90%;
+						
+						img {
+							max-height: 100%;
+						}
 					}
-				}
 
-				.logo-description-wrapper {
-					font-size: 15px;
+					.logo-description-wrapper {
+						font-size: 15px;
+						@media (max-width: 1879px) {
+							font-size: 13px;
+						}
+					}
+				
 				}
-			
+				
 			}
-			
 		}
-	}
 
-	&.hide {
-		top: -110px;
+		&.hide {
+			top: -110px;
+			@media (max-width: 1879px) {
+				top: -90px;
+			}
+		}
 	}
 
 }
