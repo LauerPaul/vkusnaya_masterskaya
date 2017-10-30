@@ -9,7 +9,7 @@ footer {
 
 	@media (max-width: 1039px) {
 		height: 124px;
-		padding-bottom: 0;
+		padding-bottom: 40px;
 	}
 	
 	.header-menu {
@@ -67,6 +67,10 @@ footer {
 			@media (max-width: 1879px) {
 				width: 372px;
 			    margin-right: 160px;
+			}
+			@media (max-width: 1230px) and (min-width: 1040px){
+				width: 478px;
+				margin-right: 50px;	
 			}
 			@media (max-width: 1039px) {
 			    width: calc(100%);
@@ -276,4 +280,10 @@ footer {
 
 	}
 
+}
+.order-page {
+	header .btn-section,
+	footer .btn-section {
+		display: none;
+	}
 }

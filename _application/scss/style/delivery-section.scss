@@ -16,6 +16,10 @@
 		height: 100%;
 		width: 700px;
 		margin: auto;
+		
+		@media (max-width: 1879px) and (min-width: 1040px){
+			width: 596px;
+		}
 	}
 
 	.padding-block {

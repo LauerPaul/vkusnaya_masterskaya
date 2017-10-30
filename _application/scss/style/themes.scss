@@ -1,6 +1,26 @@
 * {
 	outline: none;
 }
+.thanks-text {
+    height: 80%;
+    
+    h1 {
+		font-family: Roboto,sans-serif;
+	    font-weight: 400;
+	    font-style: normal;
+	    font-size: 36px;
+	    color: #4dbfc0;
+	    line-height: 40px;
+	    cursor: pointer;
+	    text-decoration: none;
+    }
+    p {
+		color: #9a7e55;
+		font-family: Roboto,sans-serif;
+		font-weight: 400;
+		font-style: normal;
+    }
+}
 
 body {
 	padding-top: 168px;

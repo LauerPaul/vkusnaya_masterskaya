@@ -87,6 +87,11 @@ header {
 				width: 372px;
 			    margin-right: 160px;
 			}
+			
+			@media (max-width: 1230px) and (min-width: 1040px){
+				width: 478px;
+				margin-right: 50px;	
+			}
 			@media (max-width: 1039px) {
 			    width: calc(100% - 86px);
 			    margin: 0px;

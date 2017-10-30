@@ -1,0 +1,168 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="language" content="RU"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="icon" type="image/png" href="images/favicon.png"/>
+    <title>Самые вкусные торты на заказ – Мастерская Вкуса (Киев)</title>
+    <meta name="description" content="Мы делаем торты и капкейки на заказ с уникальным дизайном по Вашим пожеланиям. Бесплатно доставим по Киеву и пригороду. Заказывайте!"/>
+    <link rel="stylesheet" href="styles/css/main.min.css"/><!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-108822248-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-108822248-1');
+      
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script async="async" src="js/tether.min.js"></script>
+    <script async="async" src="js/bootstrap.min.js"></script>
+  </head>
+  <body class="order-page">
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <div class="header-menu d-flex align-items-center">
+          <!-- logo-->
+          <div class="logo-section d-flex align-items-center">
+            <div class="logo-wrapper"><img src="images/logo.png" alt="мастерская вкуса"/></div>
+            <div class="logo-description-wrapper">Домашняя<br>кондитерская</div>
+          </div>
+          <!--tel-->
+          <div class="tel-section d-flex align-items-center">
+            <div class="wrapper"><a class="tel-wrapper" href="tel:0669752865">(066) 975-28-65</a><span class="tel-description">без выходных с 8:00 до 21:00</span>
+              <div class="icon-tel-wrapper"></div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- social-->
+          <div class="social-section d-flex align-items-center"><span class="social-link d-flex align-items-center flex-row-reverse"><a href="https://www.instagram.com/masterskaya__vkusa/" target="_blank">Instagram</a>
+              <div class="before inst"></div></span>
+            <div class="social-link d-flex align-items-center flex-row-reverse"><a href="https://www.facebook.com/natalka.zin" target="_blank">Facebook</a>
+              <div class="before faceb"></div>
+            </div>
+          </div>
+          <!-- buy btn-->
+          <div class="btn-section">
+            <button class="btn-popup hvr-grow" onclick="location.href = '/order'">СДЕЛАТЬ ЗАКАЗ</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- *HEADER* -->
+    <!-- POPUP -->
+    <div class="popup-wrapper d-flex justify-content-center align-items-center">
+      <div class="wrapp">
+        <div class="container">
+          <div class="popup-window">
+            <div class="close-btn">
+              <div class="after"></div>
+            </div>
+            <div class="title">Оформление заказа на торт</div>
+            <form id="feed" action="">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-6 col-xs-12">
+                    <div class="input-group flex-wrap width-50">
+                      <label>Как Вас зовут:</label>
+                      <input class="width-50" type="text" name="name"/>
+                    </div>
+                  </div>
+                  <div class="col-6 col-xs-12">
+                    <div class="input-group flex-wrap float-right width-50">
+                      <label>Ваш контактный телефон: *</label>
+                      <input class="width-50" type="tel" name="tel" required="required"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="input-group flex-wrap">
+                      <label>Комментарий:</label>
+                      <textarea name="comment"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="input-group flex-wrap">
+                      <label>Куда нужно доставить торт (адрес доставки)?</label>
+                      <input type="text" name="address"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="input-group flex-wrap item-210">
+                      <label>Вес торта: <span>(если уже знаете)</span></label>
+                      <input type="text" name="ves"/>
+                    </div>
+                    <div class="input-group flex-wrap item-210-next">
+                      <label>Есть ли пожелания по составу торта?: </label>
+                      <input type="text" name="sostav"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="input-group flex-wrap w-600">
+                      <label>Хотите приложить фото с примером?</label>
+                      <div class="load-btn">ЗАГРУЗИТЬ ФОТО
+                        <input type="file" multiple="multiple"/>
+                      </div>
+                    </div>
+                    <div class="input-group flex-wrap w-2">
+                      <label>Желаемая дата доставки:</label>
+                      <input type="text" name="date"/>
+                    </div>
+                  </div>
+                  <div class="bottom-section-popup">
+                    <button class="btn-popup hvr-grow">СДЕЛАТЬ ЗАКАЗ</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="header-menu d-flex align-items-center">
+          <!-- logo-->
+          <div class="logo-section d-flex align-items-center">
+            <div class="logo-wrapper"><img src="images/logo.png" alt="мастерская вкуса"/></div>
+            <div class="logo-description-wrapper">Домашняя<br>кондитерская</div>
+          </div>
+          <!--tel-->
+          <div class="tel-section d-flex align-items-center">
+            <div class="wrapper"><a class="tel-wrapper" href="tel:0669752865">(066) 975-28-65</a><span class="tel-description">без выходных с 8:00 до 21:00</span>
+              <div class="icon-tel-wrapper"></div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- social-->
+          <div class="social-section d-flex align-items-center"><span class="social-link d-flex align-items-center flex-row-reverse"><a href="https://www.instagram.com/masterskaya__vkusa/" target="_blank">Instagram</a>
+              <div class="before inst"></div></span>
+            <div class="social-link d-flex align-items-center flex-row-reverse"><a href="https://www.facebook.com/natalka.zin" target="_blank">Facebook</a>
+              <div class="before faceb"></div>
+            </div>
+          </div>
+          <!-- buy btn-->
+          <div class="btn-section">
+            <button class="btn-popup hvr-grow" onclick="location.href = '/order'">СДЕЛАТЬ ЗАКАЗ</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- *FOOTER* -->
+    <script async="async" src="js/wow.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script async="async" src="js/jquery.jscrollpane.js"></script>
+    <script async="async" src="js/main.js"></script>
+  </body>
+</html>

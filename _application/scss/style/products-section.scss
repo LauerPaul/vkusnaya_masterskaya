@@ -2,8 +2,6 @@
 .arrow-slide {
 	display: none;
 
-	@media (max-width: 1039px) {
-		display: block;
 		position: absolute;
 		width: 23px;
 		height: 36px;
@@ -16,38 +14,60 @@
 		cursor: pointer;
 
 		&.right {
-			left: auto;
-			right: 0;
-		    transform: rotate(180deg);
+		left: auto;
+		right: 0;
+		transform: rotate(180deg);
 		}
 
 		&:hover {
-			opacity: 1;
+		opacity: 1;
 		}
 
 		&.disabled {
-			opacity: 0.3;
-			cursor: default;
+		opacity: 0.3;
+		cursor: default;
 
-			&:hover {
-				opacity: 0.3;
+		&:hover {
+			opacity: 0.3;
+		}
+		}
+	&.d-block {
+		display: block;
+		left: 45px;
+		
+		@media (max-width: 1039px) {
+			left: 0px;
+		}
+
+		&.right {
+			right: 45px;
+			left: auto;
+			
+			@media (max-width: 1039px) {
+				right: 0px;
+				left: auto;
 			}
 		}
 	}
+	@media (max-width: 1039px) {
+		display: block;
+	}
 }
+
 .products-section {
 	width: 1530px;
 	padding-top: 70px;
 	padding-bottom: 55px;
 	margin: auto;
+	overflow: hidden;
 
 	@media (max-width: 1879px) {
-		width: 100%;
+	    width: 1000px;
 	    display: flex;
 	    flex-wrap: wrap;
 	}
 	@media (max-width: 1039px) {
-		width: 90%;
+		width: 255px;
 	    flex-wrap: nowrap;
     	overflow: hidden;
 		padding-top: 30px;
@@ -68,29 +88,11 @@
 		float: left;
 	
 		@media (max-width: 1879px) {
-			flex: 0 0 33%;
-   			max-width: 33%;
+   			width: 500px;
 		}
 		
 		@media (max-width: 1039px) {
-		    flex: none;
-	   		max-width: 100%;
-	    	float: left;
-	    	display: none;
-
-	    	&.active {
-				display: -webkit-box!important;
-				display: -webkit-flex!important;
-				display: -ms-flexbox!important;
-				display: flex!important;
-				-webkit-flex-wrap: wrap!important;
-				-ms-flex-wrap: wrap!important;
-				flex-wrap: wrap!important;
-				-webkit-box-align: center!important;
-				-webkit-align-items: center!important;
-				-ms-flex-align: center!important;
-				align-items: center!important;
-	    	}
+			width: 255px;
 	    }
 
 		.product-item {
@@ -102,13 +104,14 @@
 			overflow: hidden;
 			
 			@media (max-width: 1879px) {
-				width: calc(100% - 20px;);
+				width: 480px;
 
 				img {
 					max-width: 100%;
 				}
 			}
 			@media (max-width: 1039px) {
+				width: 245px;
 				margin-bottom: 12px;
 			}	
 

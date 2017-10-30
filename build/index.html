@@ -6,8 +6,17 @@
     <meta http-equiv="language" content="RU"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <link rel="icon" type="image/png" href="images/favicon.png"/>
-    <title>Мастерская вкуса</title>
-    <link rel="stylesheet" href="styles/css/main.min.css"/>
+    <title>Самые вкусные торты на заказ – Мастерская Вкуса (Киев)</title>
+    <meta name="description" content="Мы делаем торты и капкейки на заказ с уникальным дизайном по Вашим пожеланиям. Бесплатно доставим по Киеву и пригороду. Заказывайте!"/>
+    <link rel="stylesheet" href="styles/css/main.min.css"/><!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-108822248-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-108822248-1');
+      
+    </script>
     <script src="js/jquery.min.js"></script>
     <script async="async" src="js/tether.min.js"></script>
     <script async="async" src="js/bootstrap.min.js"></script>
@@ -38,7 +47,7 @@
           </div>
           <!-- buy btn-->
           <div class="btn-section">
-            <button class="btn-popup hvr-grow">СДЕЛАТЬ ЗАКАЗ</button>
+            <button class="btn-popup hvr-grow" onclick="location.href = '/order'">СДЕЛАТЬ ЗАКАЗ</button>
           </div>
         </div>
       </div>
@@ -47,7 +56,7 @@
     <!-- SLIDER SECION-->
     <section class="slider-section text-center" style="background-image: url(images/background-top.jpg);">
       <div class="container">
-        <div class="title-section">Самые вкусные торты<br><span class="mini-information">на заказ в Киеве</span></div>
+        <h1 class="title-section">Самые вкусные торты<br><span class="mini-information">на заказ в Киеве</span></h1>
         <div class="advantages"></div>
       </div>
     </section>
@@ -58,7 +67,7 @@
         <div class="d-flex align-items-center wrapper flex-wrap">
           <div class="text-wrapper text-center">
             <div class="gold-text title">У нас оптимальная стоимость по Киеву и пригороду:</div>
-            <div class="pink-text">от 300 до 750 грн. за килограмм</div>
+            <div class="pink-text">от 300 до 750 грн. за кг.</div>
             <div class="gold-text">Стоимость зависит от сложности оформления и состава торта</div>
           </div>
           <div class="description-text">
@@ -71,79 +80,72 @@
     <!---->
     <!-- products section-->
     <div class="container">
-      <div class="arrow-slide left disabled" onclick="slide('products', 'prev', this)"></div>
+      <div class="arrow-slide d-block left disabled" onclick="slide('products', 'prev', this)"></div>
       <div class="products-section">
-        <div class="product-column active">
-          <!-- ITEM-->
-          <div class="product-item product_1"><img src="images/products/product_1.jpg" alt="Торт для мальчика"/>
-            <div class="wrapper-information">
-              <div class="title-product">Торт для мальчика "МИМИШКИ"</div>
-              <div class="text-product">Нежный бисквит на основе натурального йогурта, сливочным кремом и свежими ягодами клубники и малины.</div>
-              <div class="price-product">от 400 грн/кг</div>
+        <div class="d-flex wrapper-product">
+          <div class="product-column active">
+            <!-- ITEM-->
+            <div class="product-item product_1"><img src="images/products/product_1.jpg" alt="Торт для мальчика"/>
+              <div class="wrapper-information">
+                <div class="title-product">Торт для мальчика "МИМИШКИ"</div>
+                <div class="text-product">Нежный бисквит на основе натурального йогурта, сливочным кремом и свежими ягодами клубники и малины.</div>
+                <div class="price-product">от 400 грн/кг</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="product-column">
-          <!-- ITEM-->
-          <div class="product-item product_2"><img src="images/products/product_2.jpg" alt="Торт юбиляру"/>
-            <div class="wrapper-information">
-              <div class="title-product">Торт юбиляру "Истории жизни"</div>
-              <div class="text-product">Пряный морковный бисквит по-американски с орехами, корицей, кремом из сливочного сыра и сливок и ежевикой.</div>
-              <div class="price-product">от 450 грн/кг</div>
+          <div class="product-column">
+            <div class="product-item product_1"><img src="images/products/product_1.jpg" alt="Торт для мальчика"/>
+              <div class="wrapper-information">
+                <div class="title-product">Торт для мальчика "МИМИШКИ"</div>
+                <div class="text-product">Нежный бисквит на основе натурального йогурта, сливочным кремом и свежими ягодами клубники и малины.</div>
+                <div class="price-product">от 400 грн/кг</div>
+              </div>
             </div>
           </div>
-          <!-- ITEM-->
-          <div class="product-item product_2"><img src="images/products/product_3.jpg" alt="Торт для мальчика"/>
-            <div class="wrapper-information">
-              <div class="title-product">Торт с какао для кладоискателя</div>
-              <div class="text-product">Шоколадный бисквит на основе натурального какао с нежным сливочно-карамельным кремом и грильяж с карамелью.</div>
-              <div class="price-product">от 380 грн/кг</div>
+          <div class="product-column">
+            <!-- ITEM-->
+            <div class="product-item product_1"><img src="images/products/product_4.jpg" alt="Детский торт"/>
+              <div class="wrapper-information">
+                <div class="title-product">Детский торт "Винни и друзья"</div>
+                <div class="text-product">Бисквит готовится на пару с нежным французким кремом "Патисьер" с добавлением  натуральных сливок и ягод.</div>
+                <div class="price-product">от 450 грн/кг</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="product-column">
-          <!-- ITEM-->
-          <div class="product-item product_1"><img src="images/products/product_4.jpg" alt="Детский торт"/>
-            <div class="wrapper-information">
-              <div class="title-product">Детский торт "Винни и друзья"</div>
-              <div class="text-product">Бисквит готовится на пару с нежным французким кремом "Патисьер" с добавлением  натуральных сливок и ягод.</div>
-              <div class="price-product">от 450 грн/кг</div>
+          <div class="product-column">
+            <!-- ITEM-->
+            <div class="product-item"><img src="images/products/product_1.jpg" alt="Весенний свадебный торт"/>
+              <div class="wrapper-information">
+                <div class="title-product">Весенний свадебный торт</div>
+                <div class="text-product">Ванильный бисквит со сливочным крем-сыром, кусочками свежей клубники и клубничным конфи. Декор: сахарные цветы</div>
+                <div class="price-product">250-320 грн/кг</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="product-column">
-          <!-- ITEM-->
-          <div class="product-item product_2 mob"><img src="images/products/product_5.jpg" alt="Весенний свадебный торт"/>
-            <div class="wrapper-information">
-              <div class="title-product">Весенний свадебный торт</div>
-              <div class="text-product">Ванильный бисквит со сливочным крем-сыром, кусочками свежей клубники и клубничным конфи. Декор: сахарные цветы</div>
-              <div class="price-product">250-320 грн/кг</div>
+          <div class="product-column">
+            <!-- ITEM-->
+            <div class="product-item"><img src="images/products/product_1.jpg" alt="Торт на юбилей"/>
+              <div class="wrapper-information">
+                <div class="title-product">Торт на юбилей "Букет для мамы"</div>
+                <div class="text-product">Ванильный бисквит, приготовленный на пару. Сливочный крем на основе Филадельфии и свежая малина. Декор: живые цветы</div>
+                <div class="price-product">от 400 грн/кг</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="product-column">
-          <!-- ITEM-->
-          <div class="product-item product_2 mob"><img src="images/products/product_6.jpg" alt="Торт на юбилей"/>
-            <div class="wrapper-information">
-              <div class="title-product">Торт на юбилей "Букет для мамы"</div>
-              <div class="text-product">Ванильный бисквит, приготовленный на пару. Сливочный крем на основе Филадельфии и свежая малина. Декор: живые цветы</div>
-              <div class="price-product">от 400 грн/кг</div>
-            </div>
-          </div>
-        </div>
-        <div class="product-column">
-          <!-- ITEM-->
-          <div class="product-item product_2 mob"><img src="images/products/product_7.jpg" alt="Торт на юбилей"/>
-            <div class="wrapper-information">
-              <div class="title-product">Cake Smash / Первый тортик</div>
-              <div class="text-product">Нежный ванильный бисквит со сливочным крем-сыром и слайсами сладкого свежего банана. Мастика, сливочный крем.</div>
-              <div class="price-product">от 350 грн/кг</div>
+          <div class="product-column">
+            <!-- ITEM-->
+            <div class="product-item"><img src="images/products/product_1.jpg" alt="Торт на юбилей"/>
+              <div class="wrapper-information">
+                <div class="title-product">Cake Smash / Первый тортик</div>
+                <div class="text-product">Нежный ванильный бисквит со сливочным крем-сыром и слайсами сладкого свежего банана. Мастика, сливочный крем.</div>
+                <div class="price-product">от 350 грн/кг</div>
+              </div>
             </div>
           </div>
         </div>
         <div class="clearfix"></div>
       </div>
-      <div class="arrow-slide right" onclick="slide('products', 'next', this)"></div>
+      <div class="arrow-slide d-block right" onclick="slide('products', 'next', this)"></div>
     </div>
     <!---->
     <!-- USERS SECTION -->
@@ -209,7 +211,7 @@
             <div class="social-section d-flex align-items-center"><a class="social-link inst d-flex align-items-center hvr-grow-shadow" href="https://www.instagram.com/masterskaya__vkusa/" target="_blank"></a><a class="social-link faceb d-flex align-items-center hvr-grow-shadow" href="https://www.facebook.com/natalka.zin" target="_blank"></a></div>
             <!-- buy btn-->
             <div class="btn-section">
-              <button class="btn-popup hvr-grow-shadow">СДЕЛАТЬ ЗАКАЗ</button>
+              <button class="btn-popup hvr-grow-shadow" onclick="location.href = '/order'">СДЕЛАТЬ ЗАКАЗ</button>
             </div>
           </div>
         </div>
@@ -339,7 +341,7 @@
           </div>
           <!-- buy btn-->
           <div class="btn-section">
-            <button class="btn-popup hvr-grow">СДЕЛАТЬ ЗАКАЗ</button>
+            <button class="btn-popup hvr-grow" onclick="location.href = '/order'">СДЕЛАТЬ ЗАКАЗ</button>
           </div>
         </div>
       </div>
@@ -349,79 +351,5 @@
     <script src="js/jquery.mousewheel.min.js"></script>
     <script async="async" src="js/jquery.jscrollpane.js"></script>
     <script async="async" src="js/main.js"></script>
-    <!-- POPUP -->
-    <div class="popup-wrapper d-flex justify-content-center align-items-center hidden">
-      <div class="wrapp">
-        <div class="popup-window">
-          <div class="close-btn">
-            <div class="after"></div>
-          </div>
-          <div class="title">Оформление заказа на торт</div>
-          <form action="">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-6 col-xs-12">
-                  <div class="input-group flex-wrap width-50">
-                    <label>Как Вас зовут:</label>
-                    <input class="width-50" type="text" name="name"/>
-                  </div>
-                </div>
-                <div class="col-6 col-xs-12">
-                  <div class="input-group flex-wrap float-right width-50">
-                    <label>Ваш контактный телефон: *</label>
-                    <input class="width-50" type="tel" name="tel"/>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="input-group flex-wrap">
-                    <label>Комментарий:</label>
-                    <textarea name="comment"></textarea>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="input-group flex-wrap">
-                    <label>Куда нужно доставить торт (адрес доставки)?</label>
-                    <input type="text" name="address"/>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="input-group flex-wrap item-210">
-                    <label>Вес торта: <span>(если уже знаете)</span></label>
-                    <input type="text" name="ves"/>
-                  </div>
-                  <div class="input-group flex-wrap item-210-next">
-                    <label>Есть ли пожелания по составу торта?: </label>
-                    <input type="text" name="sostav"/>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="input-group flex-wrap w-600">
-                    <label>Хотите приложить фото с примером?</label>
-                    <div class="load-btn">ЗАГРУЗИТЬ ФОТО
-                      <input type="file" multiple="multiple"/>
-                    </div>
-                  </div>
-                  <div class="input-group flex-wrap w-2">
-                    <label>Желаемая дата доставки:</label>
-                    <input type="text" name="date"/>
-                  </div>
-                </div>
-                <div class="bottom-section-popup">
-                  <button class="btn-popup hvr-grow">СДЕЛАТЬ ЗАКАЗ</button>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
   </body>
 </html>

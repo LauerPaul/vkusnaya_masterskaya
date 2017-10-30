@@ -4,7 +4,7 @@ var hh = $('header').height(),
 slide = function(t, s, o){
 	switch(t) {
 		case 'products':
-			var obj = '.product-column';
+			var obj = 'products';
 			break;
 		case 'feed':
 			var obj = '.user-item';
@@ -17,27 +17,89 @@ slide = function(t, s, o){
 	var active = $(obj + '.active'),
 		ind = active.index(),
 		lnth = $(obj).length;
+	if(obj != 'products'){
+		if(s == 'next' && !$(o).hasClass('disabled')) {
+			if(ind + 1 != lnth){
+				active.removeClass('active');
+				$($(obj)[ind + 1]).addClass('active');
+				$(o).parent().find('.arrow-slide.left').removeClass('disabled');
+			} else {
+				active.removeClass('active');
+				$($(obj)[0]).addClass('active');
+			}
+		}
+		else if(s == 'prev' && !$(o).hasClass('disabled')){
+			if(ind != 0){
+				active.removeClass('active');
+				$($(obj)[ind - 1]).addClass('active');
+			}else {
+				active.removeClass('active');
+				$($(obj)[lnth - 1]).addClass('active');
+			}
+		}
+	}else{
+		products.slide(o, s);
+	}
+},
+products = {
+	init: function(){
+		var pro = $('.product-column'),
+			products_l = pro.length,
+			pro_w = pro.width(),
+			wrap_w = products_l * pro_w;
 
-	if(s == 'next' && !$(o).hasClass('disabled')) {
-		if(ind + 1 <= lnth){
-			active.removeClass('active');
-			$($(obj)[ind + 1]).addClass('active');
+		$('.wrapper-product').css('width', wrap_w);
+	},
+	slide: function(o, s){
+		console.log('products slide');
+		var pro = $('.product-column'),
+			pro_w = pro.width(),
+			products_l = pro.length,
+			wrap_w = products_l * pro_w;
+			margin = $('.wrapper-product').css('margin-left');
 
-			if(lnth == ind + 2){
-				$(o).addClass('disabled').parent().find('.arrow-slide.left').removeClass('disabled');
-			}else{$(o).parent().find('.arrow-slide.left').removeClass('disabled');}
+			if($(window).width() < 1879){
+				var size = -wrap_w + (pro_w);
+			}else{
+				var size = -wrap_w + (pro_w * 2);
+			}
+
+		if(s == 'next' && !$(o).hasClass('disabled')) {
+			$(o).parent().find('.arrow-slide.left').removeClass('disabled');
+			if(size < parseInt(margin) - parseInt(pro_w)){
+				$('.wrapper-product').animate({'margin-left': parseInt(margin) - parseInt(pro_w)});
+			}
+			else {
+				$('.wrapper-product').animate({'margin-left': 0});
+			}
+		}
+		else if(s == 'prev' && !$(o).hasClass('disabled')){
+			if((parseInt(margin) + parseInt(pro_w) - parseInt(pro_w)) < 0){
+				$('.wrapper-product').animate({'margin-left': parseInt(margin) + parseInt(pro_w)});
+			}
+			else {
+				$('.wrapper-product').animate({'margin-left': size + pro_w});
+			}
 		}
 	}
-	else if(s == 'prev' && !$(o).hasClass('disabled')){
-		if(ind != 0){
-			active.removeClass('active');
-			$($(obj)[ind - 1]).addClass('active');
+},
+form_submit = function(obj){
+	var serialize = $(obj).serialize();
 
-			if(0 == ind - 1){
-				$(o).addClass('disabled').parent().find('.arrow-slide.right').removeClass('disabled');
-			}else{$(o).parent().find('.arrow-slide.right').removeClass('disabled');}
+	$.ajax({
+		url: '/send.php',
+		type: 'POST',
+		dataType: 'json',
+		data: serialize,
+		success: function(data){
+			if(data == 'SENDED') {
+				console.log('test');	
+			}
+		},
+		error: function(er_log){
+			console.log(er_log);
 		}
-	}
+	});		
 };
 
 $(document).on('scroll', function(){
@@ -58,43 +120,49 @@ $(document).on('scroll', function(){
 		$('header').removeClass('scroll hide');
 	}
 })
-.on('click', '.btn-popup', function(){
-	$('html').css({'overflow':'hidden'});
-	$('.popup-wrapper').removeClass('hidden').show('slow');
-	scroll = $('.popup-wrapper .wrapp').jScrollPane({
-		// mouseWheelSpeed: 10
-	}).data().jsp;
+.on('submit', 'form#feed', function(e){
+	e.preventDefault();
+	e.stopPropagation();
+	form_submit(this);
 })
-.on('click', '.popup-wrapper .close-btn', function(){
-	$('html').css({'overflow':'auto'});
-	$('.popup-wrapper').addClass('hidden');
-	scroll.destroy()
-})
+// .on('click', '.btn-popup', function(){
+// 	$('html').css({'overflow':'hidden'});
+// 	$('.popup-wrapper').removeClass('hidden').show('slow');
+// 	scroll = $('.popup-wrapper .wrapp').jScrollPane({
+// 		// mouseWheelSpeed: 10
+// 	}).data().jsp;
+// })
+// .on('click', '.popup-wrapper .close-btn', function(){
+// 	$('html').css({'overflow':'auto'});
+// 	$('.popup-wrapper').addClass('hidden');
+// 	scroll.destroy()
+// })
 .on('change', 'input[type=file]', function(){
 	if (this.files[0]) {
-		var fr = new FileReader(),
-			img = $(this).val(),
-			inp = '<input type="file" name="file_'+(files_count + 1)+'" class="d-none">';
-	
-		$('.input-group.w-600').append(inp);
-		files_count += 1;
-
-		inp = $('.input-group.w-600').find('input[name="file_' + files_count + '"]');
-		inp.attr('value', img);
-
-		if($(document).find('.prev-load').length < 4){
-			fr.addEventListener("load", function () {
-				$('.input-group.w-600').append('<div class="prev-load" data-id="file_'+files_count+'"><img src="'+ fr.result +'"></div>');
-			}, false);
-		}
-
-		fr.readAsDataURL(this.files[0]);
-		$(this).val('');
-		setTimeout(function(){
-			scroll = $('.popup-wrapper .wrapp').jScrollPane({
-				// mouseWheelSpeed: 10
-			}).data().jsp;
-		}, 1000);
+		var form_data = new FormData($('form').get(0)),
+			folder = localStorage.getItem('folder');
+			console.log(folder);
+			// form_data = form_data.append('folder', folder);
+		$.ajax({
+			url: '/load.php',
+			type: 'POST',
+			dataType: 'json',
+			data: form_data,
+			cache:false,
+			processData: false,
+	        contentType: false,
+			success: function(data){
+				if($(document).find('.prev-load').length < 4){
+					var a = data.replace('/home/zakaztortov/public_html/', 'http://zakaz-tortov.com.ua/');
+					$('.input-group.w-600').append('<div class="prev-load" ><img src="'+ a +'"></div>');
+					$('input[name="files"]').val($('input[name="files"]').val() + a + ';');
+					console.log($('input[name="files"]').val());
+				}
+			},
+			error: function(er_log){
+				console.log(er_log);
+			}
+		});
 	}
 })
 .on('click', '.load-btn', function(e){
@@ -104,10 +172,37 @@ $(document).on('scroll', function(){
     }
 })
 .on('click', '.prev-load', function(){
-	var id = $(this).attr('data-id');
-	$(document).find('input[name="'+id+'"]').remove();
+	var id = $(this).find('img').attr('src');
 	$(this).remove();
-	scroll = $('.popup-wrapper .wrapp').jScrollPane({
-		// mouseWheelSpeed: 10
-	}).data().jsp;
+
+	// $.ajax({
+	// 	url: '/load.php',
+	// 	type: 'POST',
+	// 	dataType: 'json',
+	// 	data: form_data,
+	// 	cache:false,
+	// 	processData: false,
+ //        contentType: false,
+	// 	success: function(data){
+	// 		if($(document).find('.prev-load').length < 4){
+	// 			var a = data.replace('/home/zakaztortov/public_html/', 'http://zakaz-tortov.com.ua/');
+	// 			$('.input-group.w-600').append('<div class="prev-load" ><img src="'+ a +'"></div>');
+	// 		}
+	// 	},
+	// 	error: function(er_log){
+	// 		console.log(er_log);
+	// 	}
+	// });
+})
+.ready(function(){
+	if(localStorage.getItem('folder') == null || localStorage.getItem('folder') == ''){
+		var R = Math.random() * (4000456000 - 456000) + 456000;
+		localStorage.setItem('folder', R);
+	}
+	products.init();
 });
+
+$(window).resize(function(){
+	products.init();
+	$('.wrapper-product').animate({'margin-left': 0});
+})

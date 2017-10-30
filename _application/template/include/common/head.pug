@@ -6,9 +6,18 @@ head
 
 	link(rel="icon", type="image/png", href="images/favicon.png")
 
-	title Мастерская вкуса
+	title Самые вкусные торты на заказ – Мастерская Вкуса (Киев)
+	meta(name='description', content='Мы делаем торты и капкейки на заказ с уникальным дизайном по Вашим пожеланиям. Бесплатно доставим по Киеву и пригороду. Заказывайте!')
 
 	link(rel='stylesheet', href='styles/css/main.min.css')
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	script(async src="https://www.googletagmanager.com/gtag/js?id=UA-108822248-1")
+	script.
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-108822248-1');
 
 	script(src='js/jquery.min.js')
 	script(async, src='js/tether.min.js')
